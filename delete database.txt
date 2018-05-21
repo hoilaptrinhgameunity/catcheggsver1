@@ -1,0 +1,25 @@
+﻿delete AccountCharacter
+delete Character
+DELETE TopResetInMonth
+DELETE TopResetInWeek
+delete Guild
+delete GuildMember
+delete MEMB_STAT
+delete fw_chotroi2
+delete warehouse
+DELETE FROM OptionData
+DELETE FROM T_CGuid
+delete T_FriendList
+delete T_FriendMail
+delete T_FriendMain
+delete T_WaitFriend
+DELETE FROM T_PetItem_Info
+DELETE FROM T_PeriodItem_Info
+DELETE FROM TopResetInWeek
+DELETE FROM TopResetInMonth
+DELETE FROM WebShop_LOG
+update memb_info set wcoin=0,Bank_MoneyC1=0,Bank_MoneyC2=0,Bank_MoneyC3=0,Bank_MoneyC4=0,Bank_Chaos=0,Bank_Cre=0,Bank_blue=0,Bank_Zen=0,svip=0,svip_time=0,svip_khuyenmai=0
+
+-----------------------------------------------
+delete memb_info (xóa tài khoản)
+delete MuWeb_admin_card (xóa thẻ nạp cũ)..
