@@ -36,7 +36,7 @@ public class GuiManager : MonoBehaviour {
 			if (scoreint < PlayerPrefs.GetInt ("DiemCaoNhat")) {
 				DiemLucThua.text = "Điểm cao nhất: " + PlayerPrefs.GetInt ("DiemCaoNhat") + "\n" + "\n" + "Điểm của bạn là: " + scoreint.ToString ();
 			} else if (scoreint > PlayerPrefs.GetInt ("DiemCaoNhat")) {
-				DiemLucThua.text = "Chúc mừng đạt kỹ lục mới" + "\n" + "\n" + "Điểm cao nhất: " + scoreint.ToString ();
+				DiemLucThua.text = "Chúc mừng bạn đạt kỹ lục mới" + "\n" + "\n" + "Điểm cao mới: " + scoreint.ToString ();
 			}
 			SpawnObject.active = false;
 			InfoPanel.active = false;
