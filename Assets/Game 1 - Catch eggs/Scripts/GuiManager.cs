@@ -21,6 +21,8 @@ public class GuiManager : MonoBehaviour {
 	public Text DiemLucThua;
 	public Text Cap;
 
+	public Toggle toggleNhacNen;
+	public Toggle toggleNhacGame;
 	public AudioMixer audioMixer;
 
 	private int maxHealth_Bucket = 2;
@@ -137,7 +139,12 @@ public class GuiManager : MonoBehaviour {
 		Debug.Log("Button was Down");		
 	}
 
-	public void setVolume(float volume){
-		audioMixer.SetFloat ("volume", volume);
+	public void setVolumeNhacNen(float volume){
+		audioMixer.SetFloat ("NhacNen", volume);
+		toggleNhacNen.isOn = false;
+	}
+	public void setVolumeNhacGame(float volume){
+		audioMixer.SetFloat ("NhacGame", volume);
+		toggleNhacGame.isOn = false;
 	}
 }
