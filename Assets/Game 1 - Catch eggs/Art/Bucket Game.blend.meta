@@ -1,6 +1,7 @@
 fileFormatVersion: 2
-guid: 1e34b0422026f5f4d9c222e3092b9a42
-timeCreated: 18446744011573954816
+guid: ddcb6d063975fdd4983c792084e853c4
+timeCreated: 1527006843
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -22,31 +23,31 @@ ModelImporter:
     4300002: Egg
     4300004: Bucket
     7400000: Default Take
-    11100000: //RootNode
+    9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cloud
-    second: {fileID: 2100000, guid: 8cd81898816da034ca2fab48069cab21, type: 2}
+    second: {fileID: 2100000, guid: 65548466c70038a48a3409959aac5aa2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Egg
-    second: {fileID: 2100000, guid: c3e071973f12462419d876b621f2edc4, type: 2}
+    second: {fileID: 2100000, guid: 31ed9c79b68f63149ba8ba140e237dad, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Iron
-    second: {fileID: 2100000, guid: 7f0ccba387231284f8648ef23194d83f, type: 2}
+    second: {fileID: 2100000, guid: c4329ccf2f88db14c81d967556d3954c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wood
-    second: {fileID: 2100000, guid: d0450951e3f66c848ad25bee7635b883, type: 2}
+    second: {fileID: 2100000, guid: 1c4a60cbc5d4fdc44817eb5cc2e316b2, type: 2}
   materials:
     importMaterials: 1
-    materialName: 3
+    materialName: 0
     materialSearch: 1
     materialLocation: 0
   animations:
@@ -76,10 +77,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -90,12 +91,12 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 1
-    normalCalculationMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -115,7 +116,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
