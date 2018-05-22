@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class GuiManager : MonoBehaviour {
 	//update by minh 3/11/2018
@@ -14,10 +15,15 @@ public class GuiManager : MonoBehaviour {
 	public GameObject CloserPanel;
 	public GameObject ChangeBucket;
 	public GameObject SpawnObject;
+	public GameObject SettingPN;
 	public Text DiemCaoNhat;
 	public Text DiemHienTai;
 	public Text DiemLucThua;
 	public Text Cap;
+
+	public Toggle toggleNhacNen;
+	public Toggle toggleNhacGame;
+	public AudioMixer audioMixer;
 
 	private int maxHealth_Bucket = 2;
 	// Use this for initialization
@@ -119,9 +125,26 @@ public class GuiManager : MonoBehaviour {
 	{
 		GameMNG.trangthai = 1;
 	}
+
+	void SettingBT()
+	{
+		SettingPN.active = true;
+	}
+	void SettingOKBT()
+	{
+		SettingPN.active = false;
+	}
 	public void OnPointerDown()
 	{
-		Debug.Log("Button was Down");
-		
+		Debug.Log("Button was Down");		
+	}
+
+	public void setVolumeNhacNen(float volume){
+		audioMixer.SetFloat ("NhacNen", volume);
+		toggleNhacNen.isOn = false;
+	}
+	public void setVolumeNhacGame(float volume){
+		audioMixer.SetFloat ("NhacGame", volume);
+		toggleNhacGame.isOn = false;
 	}
 }
