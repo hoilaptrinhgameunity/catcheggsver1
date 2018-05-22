@@ -5,7 +5,7 @@ AudioMixerController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MainMixer
+  m_Name: MainMix
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -15,11 +15,15 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: 7d7be238825ea754880db31a7393dfb8
-    name: volume
+  - guid: bf0c8983d99c63a4dafe39cac5e2e352
+    name: NhacGame
+  - guid: 53509f2ac99da5a4589036bfbf9f9901
+    name: NhacNen
   m_AudioMixerGroupViews:
   - guids:
     - fac3427de98b30840b3bd15ffc5f8a11
+    - 1db1aef94c6dd584d8eef79e10ee56ca
+    - 5613b8e205beed844864a4ffe90de2ae
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -31,7 +35,9 @@ AudioMixerGroupController:
   m_Name: Master
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: fac3427de98b30840b3bd15ffc5f8a11
-  m_Children: []
+  m_Children:
+  - {fileID: 243026922844229658}
+  - {fileID: 243376247989758990}
   m_Volume: 7d7be238825ea754880db31a7393dfb8
   m_Pitch: 9d6fedc630375a44e8bb46be7774ea3e
   m_Effects:
@@ -62,5 +68,65 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 9db04182746ed4a4faf8f973eaeb0dc4
   m_FloatValues:
-    7d7be238825ea754880db31a7393dfb8: -5.2
+    7d7be238825ea754880db31a7393dfb8: 0
   m_TransitionOverrides: {}
+--- !u!243 &243026922844229658
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: NhacNen
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 1db1aef94c6dd584d8eef79e10ee56ca
+  m_Children: []
+  m_Volume: 53509f2ac99da5a4589036bfbf9f9901
+  m_Pitch: 6c1bd25299f558547b468a8c0047d166
+  m_Effects:
+  - {fileID: 244482593679479198}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243376247989758990
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: NhacGame
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 5613b8e205beed844864a4ffe90de2ae
+  m_Children: []
+  m_Volume: bf0c8983d99c63a4dafe39cac5e2e352
+  m_Pitch: a8e65dced94df6848b90f752fbf6a8fa
+  m_Effects:
+  - {fileID: 244177581676865612}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244177581676865612
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: fa97604c7fb116144a8c24047dd79ce8
+  m_EffectName: Attenuation
+  m_MixLevel: 0c97935fdc8dfb542a9e8096e11dbcd4
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244482593679479198
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 61a9883418973284ebe2bff299b1f958
+  m_EffectName: Attenuation
+  m_MixLevel: 10fda714312eb344db5b83fef1079a61
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
