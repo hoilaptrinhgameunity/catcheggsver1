@@ -4,10 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Game 1 - Catch eggs/Catch eggs.unity
-    guid: 94add963530689d4fa8f21b275ef798e
-  - enabled: 1
-    path: Assets/Scene/Shop.unity
-    guid: d2e97ae3fb75dec4b91d1e06491c9a51
+  m_Scenes: []
