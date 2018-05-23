@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 03b2d85dcf648dd42bf3d71b4bc2c3bd
-timeCreated: 1520786077
+guid: 16299be32cbbba244baa713639b542ce
+timeCreated: 1523374983
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Layer 3_0
+    21300002: Layer 3_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -32,7 +34,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
     wrapU: 1
     wrapV: 1
@@ -40,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -94,7 +96,35 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Layer 3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 631
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Layer 3_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27
+        width: 585
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
