@@ -34,7 +34,7 @@ public class GuiManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int scoreint = GameObject.Find ("GameManager").GetComponent<GameMNG> ().theScore;
-		DiemHienTai.text = "Score: " + scoreint.ToString();
+		DiemHienTai.text = scoreint.ToString();
 		int cap = GameObject.Find ("GameManager").GetComponent<GameMNG> ().cap;
 		Cap.text = cap.ToString ();
 		if (GameMNG.health == 0 && GameMNG.trangthai == 1) {
