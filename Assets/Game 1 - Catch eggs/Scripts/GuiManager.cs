@@ -48,7 +48,7 @@ public class GuiManager : MonoBehaviour {
 			InfoPanel.active = false;
 			CloserPanel.active = true;
 			GameMNG.health++;
-			ChangeBucket.active = false;
+			//ChangeBucket.active = false;
 			//update by minh
 			TouchPanel.active = false;
 			if ( scoreint > PlayerPrefs.GetInt("DiemCaoNhat"))
@@ -69,7 +69,7 @@ public class GuiManager : MonoBehaviour {
 		MainPanel.active = false;
 		SpawnObject.active = true;
 		InfoPanel.active = true;
-		ChangeBucket.active = true;
+		//ChangeBucket.active = true;
 		GameObject.Find ("GameManager").GetComponent<GameMNG> ().theScore = 0;
 		GameMNG.health = maxHealth_Bucket;
 		GameMNG.maxHealth = maxHealth_Bucket;

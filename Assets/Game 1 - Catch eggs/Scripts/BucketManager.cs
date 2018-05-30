@@ -48,11 +48,11 @@ public class BucketManager : MonoBehaviour {
 		{
 			if(iKey==1)
 			{
-				moveInput = 5 *Time.deltaTime;//Vector3.right * Time.deltaTime;
+				moveInput = -5 *Time.deltaTime;//Vector3.right * Time.deltaTime;
 			}
 			else if (iKey==2)
 			{
-				moveInput = -5* Time.deltaTime;//Vector3.left * Time.deltaTime;
+				moveInput = 5* Time.deltaTime;//Vector3.left * Time.deltaTime;
 			}
 
 		}
