@@ -8,6 +8,7 @@ public class EggScript : MonoBehaviour {
 		if (GameMNG.trangthai == 1) {
 			gameObject.GetComponent<Rigidbody>().useGravity = true;
 			transform.position -= new Vector3 (0, fallSpeed, 0);
+			
 		}
 		if (GameMNG.trangthai == 0) {
 			Tieuhuy();

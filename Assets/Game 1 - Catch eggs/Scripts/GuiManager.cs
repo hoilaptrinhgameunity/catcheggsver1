@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class GuiManager : MonoBehaviour {
+	//update 6/2/2018
+	public GameObject NewGamePanel;
 	//update by minh 3/11/2018
 	public GameObject TouchPanel;
 
@@ -16,6 +18,8 @@ public class GuiManager : MonoBehaviour {
 	public GameObject ChangeBucket;
 	public GameObject SpawnObject;
 	public GameObject SettingPN;
+
+
 	public Text DiemCaoNhat;
 	public Text DiemHienTai;
 	public Text DiemLucThua;
@@ -146,5 +150,10 @@ public class GuiManager : MonoBehaviour {
 	public void setVolumeNhacGame(float volume){
 		audioMixer.SetFloat ("NhacGame", volume);
 		toggleNhacGame.isOn = false;
+	}
+	public void NewGame()
+	{
+		Debug.Log("New game button ");
+		NewGamePanel.active = true;
 	}
 }

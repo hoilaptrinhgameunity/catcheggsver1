@@ -29,6 +29,10 @@ public class GameMNG : MonoBehaviour {
 		}
 		}		
 	}
+	public void SetGameState(int aState)
+	{
+		trangthai = aState;
+	}
 	/*void OnGUI() {
 		GUI.Label(new Rect(10, 10, 100, 20), theScore.ToString());
 	}*/
