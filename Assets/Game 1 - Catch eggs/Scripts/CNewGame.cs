@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class CNewGame : MonoBehaviour {
 
 	public InputField playerName;
@@ -18,9 +19,19 @@ public class CNewGame : MonoBehaviour {
 	}
 	void OK_BTN()
 	{
-		PlayerPrefs.SetString("Name", playerName.text);
-		PlayerPrefs.SetString("Age", playerAge.text);
-		Debug.Log(playerName.text+" "+ playerAge.text+" Years Old Start New Game!");
+		int number;
+		if (playerName.text.Length < 4) {
+			Debug.Log ("condition: length name minimun equals 4");
+		}
+		if(!int.TryParse(playerAge.text, out number)){
+			Debug.Log("condition: Age is number");
+		}
+		if (playerName.text.Length >= 4 && int.TryParse (playerAge.text, out number)) {
+			PlayerPrefs.SetString ("Name", playerName.text);
+			PlayerPrefs.SetString ("Age", playerAge.text);
+			Debug.Log (playerName.text + " " + playerAge.text + " Years Old Start New Game!");
+			gameObject.active = false;
+		}
 	}
 	void Close_BTN()
 	{
