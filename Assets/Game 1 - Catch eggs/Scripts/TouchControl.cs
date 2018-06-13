@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class TouchControl : MonoBehaviour
 {
+	public GameObject gPanelShop;
 	public GameObject gPanelPause;
 	// Use this for initialization
 	int iKey = 0;
@@ -42,6 +43,16 @@ public class TouchControl : MonoBehaviour
 			gPanelPause.active = false;
 		}
 		GameObject.Find("GameManager").GetComponent<GameMNG>().SetGameState(aState);
+
+	}
+	public void OpenShop(bool aState)
+	{
+		Debug.Log("Open Shop");
+		if(aState)
+			GameObject.Find("GameManager").GetComponent<GameMNG>().SetGameState(0);
+		else
+			GameObject.Find("GameManager").GetComponent<GameMNG>().SetGameState(1);
+		gPanelShop.active = aState;
 
 	}
 

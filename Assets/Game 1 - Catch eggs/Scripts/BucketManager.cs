@@ -7,6 +7,12 @@ public class BucketManager : MonoBehaviour {
 	public GameObject eggPrefab1;
 	public GameObject touchController;
 	// Use this for initialization
+	//UPDATE 10:32 6/13/2018 BY MINH
+	//CREATE BUCKET create_bucket1();WITHIN ANYTYPE
+	public GameObject[] eggPrefabs;
+	void CreateBuketType(int aType){
+		
+	}
 	void Start () {	
 		create_bucket1();
 		}
