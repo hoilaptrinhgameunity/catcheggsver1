@@ -3,47 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BucketManager : MonoBehaviour {
-	public GameObject eggPrefab;
-	public GameObject eggPrefab1;
+	//public GameObject eggPrefab;
+	//public GameObject eggPrefab1;
 	public GameObject touchController;
 	// Use this for initialization
 	//UPDATE 10:32 6/13/2018 BY MINH
 	//CREATE BUCKET create_bucket1();WITHIN ANYTYPE
-	public GameObject[] eggPrefabs;
+	public GameObject[] gBucketPrefabs;
+	private GameObject gBucket;
 	void CreateBuketType(int aType){
-		
+		gBucket = Instantiate(gBucketPrefabs[aType], transform.position,transform.rotation);// Quaternion.Euler(-90,0,180));
+		gBucket.transform.parent = transform;
+		gBucket.name="UsingBucket";
+	}
+	void ChangeBucketByType(int aType){
+		Destroy (gBucket);
+		CreateBuketType (aType);
 	}
 	void Start () {	
-		create_bucket1();
+		//create_bucket1();
+		CreateBuketType(1);
 		}
 	
 	// Update is called once per frame
 	void Update () {
 		runBucket ();
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			create_bucket1 ();
-		}
-		else if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			create_bucket2();
-		}
+//		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+//			create_bucket1 ();
+//		}
+//		else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+//			create_bucket2();
+//		}
+//		if(Random.Range(0,100)>95)
+//			ChangeBucketByType(1);
+//		else
+//			ChangeBucketByType(0);
 	}
-	void create_bucket1(){
-		eggPrefab1.SetActive (true);
-		eggPrefab.SetActive (false);
-	}
-	void create_bucket2(){
-		eggPrefab.SetActive (true);
-		eggPrefab1.SetActive (false);
-	}
-
-	void activeBK1(){
-		eggPrefab1.active = true;
-		eggPrefab.active = false;
-	}
-	void activeBK2(){
-		eggPrefab.active = true;
-		eggPrefab1.active = false;
-	}
+//	void create_bucket1(){
+//		eggPrefab1.SetActive (true);
+//		eggPrefab.SetActive (false);
+//	}
+//	void create_bucket2(){
+//		eggPrefab.SetActive (true);
+//		eggPrefab1.SetActive (false);
+//	}
+//
+//	void activeBK1(){
+//		eggPrefab1.active = true;
+//		eggPrefab.active = false;
+//	}
+//	void activeBK2(){
+//		eggPrefab.active = true;
+//		eggPrefab1.active = false;
+//	}
 	void runBucket(){
 		//These two lines are all there is to the actual movement..
 		float moveInput = 0;
