@@ -57,6 +57,7 @@ public class GuiManager : MonoBehaviour {
 			TouchPanel.active = false;
 			if ( scoreint > PlayerPrefs.GetInt("DiemCaoNhat"))
 				PlayerPrefs.SetInt("DiemCaoNhat", scoreint);
+			GameObject.Find ("GameManager").GetComponent<GameMNG> ().SaveAllInfor ();
 		}
 		if (Input.GetKeyDown (KeyCode.F1)) {
 			GameMNG.trangthai = 0;

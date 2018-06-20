@@ -19,6 +19,7 @@ public class EggScript : MonoBehaviour {
 			Destroy (transform.parent.gameObject);
 			if (transform.gameObject.name == "Egg") {
 				GameMNG.health -= 1f;
+				GameObject.Find ("GameManager").GetComponent<GameMNG> ().IncreaEggResult(0);
 			}
         }
 	}

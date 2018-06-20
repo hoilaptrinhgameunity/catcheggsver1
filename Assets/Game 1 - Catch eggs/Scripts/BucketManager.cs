@@ -16,7 +16,7 @@ public class BucketManager : MonoBehaviour {
 		gBucket.transform.parent = transform;
 		gBucket.name="UsingBucket";
 	}
-	void ChangeBucketByType(int aType){
+	public void ChangeBucketByType(int aType){
 		Destroy (gBucket);
 		CreateBuketType (aType);
 	}

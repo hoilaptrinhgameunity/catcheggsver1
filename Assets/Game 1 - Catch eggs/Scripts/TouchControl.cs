@@ -7,6 +7,7 @@ public class TouchControl : MonoBehaviour
 {
 	public GameObject gPanelShop;
 	public GameObject gPanelPause;
+	public GameObject gPanelArch;
 	// Use this for initialization
 	int iKey = 0;
 	
@@ -54,6 +55,9 @@ public class TouchControl : MonoBehaviour
 			GameObject.Find("GameManager").GetComponent<GameMNG>().SetGameState(1);
 		gPanelShop.active = aState;
 
+	}
+	public void OpenArch(){
+		gPanelArch.active = true;
 	}
 
 }

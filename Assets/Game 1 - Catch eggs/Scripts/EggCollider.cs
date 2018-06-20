@@ -21,8 +21,14 @@ public class EggCollider : MonoBehaviour {
 			GameMNG.health = 0f;
 		}
 		else if (theCollision.gameObject.name == "Egg") {
+			
 			GameObject.Find ("GameManager").GetComponent<GameMNG> ().expHienTai++;
 			GameObject.Find ("GameManager").GetComponent<GameMNG> ().theScore++;
+			//code by minh le 19/06 2018
+			GameMNG gGameMng=GameObject.Find ("GameManager").GetComponent<GameMNG> ();
+			if(gGameMng){
+				gGameMng.IncreaEggResult (1);
+			}
 			AudioSource audio = GameObject.Find("GameManager").GetComponent<AudioSource>();
 			audio.Play();
 
