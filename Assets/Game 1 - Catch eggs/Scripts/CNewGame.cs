@@ -19,7 +19,7 @@ public class CNewGame : MonoBehaviour {
 	void OK_BTN()
 	{
 		PlayerPrefs.SetString("Name", playerName.text);
-		PlayerPrefs.SetString("Age", playerAge.text);
+		PlayerPrefs.SetInt("Age",  System.Convert.ToInt32(playerAge.text));
 		Debug.Log(playerName.text+" "+ playerAge.text+" Years Old Start New Game!");
 	}
 	void Close_BTN()

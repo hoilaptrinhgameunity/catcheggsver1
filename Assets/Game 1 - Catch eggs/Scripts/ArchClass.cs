@@ -12,6 +12,7 @@ public class ArchClass : MonoBehaviour {
 	public Text gNameText;
 
 	void Start () {
+		GameObject.Find("GameManager").GetComponent<GameMNG>().SetGameState(0);
 		gMoneyText.text = "Money "+PlayerPrefs.GetInt ("Money").ToString();
 		gTotalEggsCatchText.text = "Success  "+ PlayerPrefs.GetInt ("TotalEgg").ToString();
 		gTotalEggsFailedText.text = "Failed "+ PlayerPrefs.GetInt ("TotalEggFailed").ToString();
@@ -26,5 +27,6 @@ public class ArchClass : MonoBehaviour {
 	public void CloseArch()
 	{
 		transform.gameObject.active = false;
+		GameObject.Find("GameManager").GetComponent<GameMNG>().SetGameState(1);
 	}
 }
