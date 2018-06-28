@@ -18,9 +18,24 @@ public class CNewGame : MonoBehaviour {
 	}
 	void OK_BTN()
 	{
-		PlayerPrefs.SetString("Name", playerName.text);
-		PlayerPrefs.SetInt("Age",  System.Convert.ToInt32(playerAge.text));
-		Debug.Log(playerName.text+" "+ playerAge.text+" Years Old Start New Game!");
+		/**fix by hong quan le**/
+		int number;
+		if (playerName.text.Length < 4) {
+			Debug.Log ("condition: length name minimun equals 4");
+			return;
+		}
+		if(!int.TryParse(playerAge.text, out number)){
+			Debug.Log("condition: Age is number");
+			return;
+		}
+		if (playerName.text.Length >= 4 && int.TryParse (playerAge.text, out number)) {
+			PlayerPrefs.SetString ("Name", playerName.text);
+			PlayerPrefs.SetInt("Age",  System.Convert.ToInt32(playerAge.text));
+			Debug.Log (playerName.text + " " + playerAge.text + " Years Old Start New Game!");
+			gameObject.active = false;
+
+		}
+
 	}
 	void Close_BTN()
 	{
