@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1432f6828d2e08545bcfc969fb50288d
-timeCreated: 1530323749
+guid: 661964ca73a309e47b9b164f2bdee9d7
+timeCreated: 1530683884
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -13,7 +13,8 @@ ModelImporter:
     100010: pPipe2
     100012: pPipe3
     100014: pTorus1
-    100016: //RootNode
+    100016: Spot
+    100018: //RootNode
     400000: Camera
     400002: Lamp
     400004: pCube10
@@ -22,7 +23,8 @@ ModelImporter:
     400010: pPipe2
     400012: pPipe3
     400014: pTorus1
-    400016: //RootNode
+    400016: Spot
+    400018: //RootNode
     2000000: Camera
     2300000: pCube10
     2300002: pCube11
@@ -36,33 +38,34 @@ ModelImporter:
     3300006: pPipe2
     3300008: pPipe3
     3300010: pTorus1
-    4300000: pCylinder1
-    4300002: pPipe2
-    4300004: pCube10
-    4300006: pTorus1
-    4300008: pCube11
-    4300010: pPipe3
+    4300000: pTorus1
+    4300002: pCube11
+    4300004: pPipe3
+    4300006: pPipe2
+    4300008: pCylinder1
+    4300010: pCube10
     10800000: Lamp
+    10800002: Spot
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: phong4SG
+      name: phong4
     second: {fileID: 2100000, guid: 8ce9f674f0ad561419d5dc1151d2d2b8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: phong5SG
+      name: phong5
     second: {fileID: 2100000, guid: 59b2b3e141ddc9642b056377019eeac8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: phong6SG
+      name: phong6
     second: {fileID: 2100000, guid: 9c95351abcdbf5b47b6d3b5d40fa9010, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: phong7SG
+      name: phong7
     second: {fileID: 2100000, guid: 3859cce4106d11a4cb70a387963c498d, type: 2}
   materials:
     importMaterials: 1
@@ -100,10 +103,10 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    swapUVChannels: 0
-    generateSecondaryUV: 0
+    swapUVChannels: 1
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
