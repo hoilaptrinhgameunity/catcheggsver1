@@ -29,6 +29,7 @@ public class EggCollider : MonoBehaviour {
 			if(gGameMng){
 				gGameMng.IncreaEggResult (1);
 			}
+
 			AudioSource audio = GameObject.Find("GameManager").GetComponent<AudioSource>();
 			audio.Play();
 

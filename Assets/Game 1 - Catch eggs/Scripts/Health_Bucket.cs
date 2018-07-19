@@ -14,7 +14,8 @@ public class Health_Bucket : MonoBehaviour {
 
 	void Update () {
 		healthBar.fillAmount = GameMNG.health / GameMNG.maxHealth;
-		string[] tmp = HealthText.text.Split (':');
-		HealthText.text = tmp [0] + ": " + GameMNG.health + "/" + GameMNG.maxHealth;
+		//string[] tmp = HealthText.text.Split (':');
+		//HealthText.text =//tmp [0] + ": " + GameMNG.health + "/" + GameMNG.maxHealth;
+		HealthText.text = GameMNG.health + "/" + GameMNG.maxHealth;
 	}
 }

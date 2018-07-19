@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class GuiManager : MonoBehaviour {
+	//update by minh 7/6/2018
+	public Text gMoney;
 	//update 6/2/2018
 	public GameObject NewGamePanel;
 	//update by minh 3/11/2018
@@ -41,6 +43,7 @@ public class GuiManager : MonoBehaviour {
 		DiemHienTai.text = scoreint.ToString();
 		int cap = GameObject.Find ("GameManager").GetComponent<GameMNG> ().cap;
 		Cap.text = cap.ToString ();
+		gMoney.text = (GameObject.Find ("GameManager").GetComponent<GameMNG> ().GetMoney ()).ToString ();
 		if (GameMNG.health == 0 && GameMNG.trangthai == 1) {
 			GameMNG.trangthai = 0;
 			if (scoreint < PlayerPrefs.GetInt ("DiemCaoNhat")) {
@@ -57,7 +60,7 @@ public class GuiManager : MonoBehaviour {
 			TouchPanel.active = false;
 			if ( scoreint > PlayerPrefs.GetInt("DiemCaoNhat"))
 				PlayerPrefs.SetInt("DiemCaoNhat", scoreint);
-			GameObject.Find ("GameManager").GetComponent<GameMNG> ().SaveAllInfor ();
+			
 		}
 		if (Input.GetKeyDown (KeyCode.F1)) {
 			GameMNG.trangthai = 0;
@@ -69,6 +72,7 @@ public class GuiManager : MonoBehaviour {
 	{
 		Debug.Log("Start Button Clicked!");
 		//update by minh
+		gMoney.text=PlayerPrefs.GetInt("Money").ToString();
 		TouchPanel.active = true;
 
 		MainPanel.active = false;
@@ -113,6 +117,7 @@ public class GuiManager : MonoBehaviour {
 		CloserPanel.active = false;
 
 		MainPanel.active = true;
+		GameObject.Find ("GameManager").GetComponent<GameMNG> ().SaveAllInfor ();
 	}
 	void ShopBT()
 	{

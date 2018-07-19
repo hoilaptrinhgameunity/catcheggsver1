@@ -30,8 +30,9 @@ public class CNewGame : MonoBehaviour {
 		}
 		if (playerName.text.Length >= 4 && int.TryParse (playerAge.text, out number)) {
 			PlayerPrefs.SetString ("Name", playerName.text);
-			PlayerPrefs.SetInt("Age",  System.Convert.ToInt32(playerAge.text));
-			Debug.Log (playerName.text + " " + playerAge.text + " Years Old Start New Game!");
+			int iAge = System.Convert.ToInt32 (playerAge.text);
+			PlayerPrefs.SetInt("Age",iAge);
+			Debug.Log (playerName.text + " " + iAge + " Years Old Start New Game!");
 			gameObject.active = false;
 
 		}
